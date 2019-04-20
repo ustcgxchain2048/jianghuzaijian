@@ -1,0 +1,25 @@
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GameServer</servlet-name>
+    <servlet-class>com.servlet.GameServer</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginSuccess</servlet-name>
+    <servlet-class>com.servlet.LoginSuccess</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>GameServer</servlet-name>
+    <url-pattern>/com.servlet/GameServer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginSuccess</servlet-name>
+    <url-pattern>/com.servlet/LoginSuccess</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

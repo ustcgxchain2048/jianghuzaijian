@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.success</groupId>
+  <artifactId>games</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>games Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <repositories>
+     <repository>
+         <id>gxchain</id>
+         <url>http://repo.gxchain.cn/repository/maven-public/</url>
+     </repository>
+  </repositories>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+    <groupId>com.gxchain.common</groupId>
+    <artifactId>gxchain-client</artifactId>
+    <version>2.0.6-RELEASE</version>
+ 	</dependency>
+  </dependencies>
+  <build>
+    <finalName>games</finalName>
+  </build>
+</project>
