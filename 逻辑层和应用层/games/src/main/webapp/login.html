@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="#" />
+    <link type="text/css" rel="styleSheet"  href="css/main.css" />
+    <link type="text/css" rel="styleSheet"  href="css/login.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/operation.js"></script>
+    <title>login</title>
+    <style>
+      
+    </style>
+    
+    <script type="text/javascript">
+    function sendLoginfor(activePrivateKey,accountIdOrName){
+        $.ajax({
+            type:"POST",
+            url:"com.servlet/LoginServe",
+            data:{
+                activePrivateKey:activePrivateKey,
+                accountIdOrName:accountIdOrName
+            },
+            success:function(data){
+            	var jdata = eval("("+data+")");
+                if(jdata.flag == 1){
+              	  	window.location.href = "select.jsp";
+                }else{
+                	alert("数据有错误发生");
+                }    
+                
+            }
+        });
+    }
+        $(document).ready(function(){
+             $("#btnon").click(function(){
+             	var activePrivateKey = $("#user").val();
+             	var accountIdOrName = $("#passwd").val();
+                if(activePrivateKey !=null && accountIdOrName!=null){
+                    sendLoginfor(activePrivateKey,accountIdOrName)
+                }else{
+                    alert("请将数据补充完整");
+                }
+                
+      });
+  });
+    </script>
+</head>
+
+
+<body>
+    <div id="bg">
+        <div id="hint">
+            <p>login</p>
+        </div>
+        <div id="login_wrap">
+            <div id="login">
+                <div id="status">
+                    <i style="top: 0">Log</i>
+                    <i style="top: 35px">Sign</i>
+                    <i style="right: 5px">in</i>
+                </div>
+                <span>
+                   
+                <p class="form"><input type="text" id="user" placeholder="please insert privetkey"></p>
+                <p class="form"><input type="text" id="passwd" placeholder="please insert accountID"></p>
+                <input type="button" value="Log in" class="btn" id="btnon" style="margin-right: 20px;">    
+                </span>
+            </div>
+
+            <div id="login_img">
+                <span class="circle">
+                    <span></span>
+                    <span></span>
+                </span>
+                <span class="star">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <span class="fly_star">
+                    <span></span>
+                    <span></span>
+                </span>
+                <p id="title">江湖再见</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var onoff = true
+    var confirm = document.getElementsByClassName("confirm")[0]
+    //var user = document.getElementById("user")
+    //var passwd = document.getElementById("passwd")
+    //var con_pass = document.getElementById("confirm-passwd")
+    
+    //¸­title
+    var name_c = document.getElementById("title")
+    name = name_c.innerHTML.split("")
+    name_c.innerHTML = ""
+    for (i = 0; i < name.length; i++)
+        if (name[i] != ",")
+            name_c.innerHTML += "<i>" + name[i] + "</i>"
+
+    function hint() {
+        let hit = document.getElementById("hint")
+        hit.style.display = "block"
+        setTimeout("hit.style.opacity = 1", 0)
+        setTimeout("hit.style.opacity = 0", 2000)
+        setTimeout('hit.style.display = "none"', 3000)
+    }
+ 
+    function signin() {
+        let status = document.getElementById("status").getElementsByTagName("i")
+        let hit = document.getElementById("hint").getElementsByTagName("p")[0]
+        if (onoff) {
+            confirm.style.height = 51 + "px"
+            status[0].style.top = 35 + "px"
+            status[1].style.top = 0
+            onoff = !onoff
+        } else {
+            /*if (!/^[A-Za-z0-9]+$/.test(user.value))
+                hit.innerHTML = "è´¦å·åªè½ä¸ºè±æåæ°å­"
+            else if (user.value.length < 6)
+                hit.innerHTML = "è´¦å·é¿åº¦å¿é¡»å¤§äº6ä½"
+            else if (passwd.value.length < 6)
+                hit.innerHTML = "å¯ç é¿åº¦å¿é¡»å¤§äº6ä½"
+            else if (passwd.value != con_pass.value)
+                hit.innerHTML = "ä¸¤æ¬¡å¯ç ä¸ç¸ç­"
+            else if (passwd.value = con_pass.value) {
+                submit(function(res) {
+                    if (res == "exist")
+                        hit.innerHTML = "è¯¥è´¦å·å·²å­å¨"
+                    else if (res == true) {
+                        hit.innerHTML = "è´¦å·æ³¨åæåï¼ä¸¤ç§åèªå¨å·æ°é¡µé¢"
+                        setTimeout("window.location.reload()", 2000)
+                    } else if (res == false)
+                        hit.innerHTML = "è´¦å·æ³¨åå¤±è´¥"
+                })
+            }
+            hint()*/
+        }
+    }
+
+    //
+    function login() {
+        if (onoff) {
+            /*let request = new XMLHttpRequest()
+            let url = ""
+            request.open("post", url, true)
+            let data = new FormData()
+            data.append("user", user.value)
+            data.append("passwd", passwd.value)
+            request.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                    if (this.responseText == false)
+                        hint()
+                    else
+                        window.location.href = this.responseText;
+                }
+            }
+            request.send(data)*/
+        } else {
+            let status = document.getElementById("status").getElementsByTagName("i")
+            confirm.style.height = 0
+            status[0].style.top = 0
+            status[1].style.top = 35 + "px"
+            onoff = !onoff
+        }
+    }
+
+</script>
+
+</html>
