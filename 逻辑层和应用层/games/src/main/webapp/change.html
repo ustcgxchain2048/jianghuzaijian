@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/operation.js"></script>
+<title>镜像导航</title>
+
+<style>
+body{
+   
+   background-repeat: no-repeat;
+   background-size:100% 100%;
+   background-attachment: fixed;
+}
+.link{
+	margin: auto;
+  	text-align: center;
+  	padding: 20px;
+  	margin: 20px;
+}
+a{
+  text-decoration: none;
+  color:white;
+}
+.butt{
+    font-size: 22px;
+    border: 20px;
+    padding:20px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border:2px solid black;
+    border-radius: 10px;
+    margin:auto;
+    background: #6B716F;
+    font-color:white;
+}
+#title{
+  font-size: 30px;
+  font-family: "微软雅黑";
+}
+</style>
+</head>
+<script type="text/javascript">
+  function sleep(numberMillis) {    
+      var now = new Date();    
+      var exitTime = now.getTime() + numberMillis;   
+      while (true) { 
+            now = new Date();       
+            if (now.getTime() > exitTime) 
+                break;
+      } 
+  }
+  function sendTwoRegister(){
+	var flag = false;
+    $.ajax({
+            type:"POST",
+            url:"com.servlet/FindPeopleServe",
+            data:{
+            },
+            success:function(data){   
+              var jdata = eval("("+data+")");
+              if(jdata.flag == 1){
+            	  flag = true;
+            	  window.location.href = "index.jsp";
+              }
+            }
+        });
+    }
+  $(document).ready(function(){
+	  window.setInterval(function(){sendTwoRegister()},3000);
+	     
+      
+	  
+   });
+</script>
+
+<body background = "img/bga.jpg">
+
+<div class="container">
+  <div class="link">
+    <div class="text" id="title">请稍等，我们正在匹配......</div>
+  </div>  
+</div>
+
+  
+</div>
+
+<script>
+</script>
+
+</body>
+</html>

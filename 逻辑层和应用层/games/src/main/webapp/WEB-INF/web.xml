@@ -1,0 +1,107 @@
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GameServer</servlet-name>
+    <servlet-class>com.servlet.GameServer</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginServe</servlet-name>
+    <servlet-class>com.servlet.LoginServe</servlet-class>
+  </servlet>
+   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PersonGrad</servlet-name>
+    <servlet-class>com.servlet.PersonGrad</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SigleServer</servlet-name>
+    <servlet-class>com.servlet.SigleServer</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteServer</servlet-name>
+    <servlet-class>com.servlet.DeleteServer</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TwoPeopleServe</servlet-name>
+    <servlet-class>com.servlet.TwoPeopleServe</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FindPeopleServe</servlet-name>
+    <servlet-class>com.servlet.FindPeopleServe</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MorePeopleServe</servlet-name>
+    <servlet-class>com.servlet.MorePeopleServe</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ChangeStateServer</servlet-name>
+    <servlet-class>com.servlet.ChangeStateServer</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetStateServer</servlet-name>
+    <servlet-class>com.servlet.GetStateServer</servlet-class>
+  </servlet>
+  
+  
+  <servlet-mapping>
+    <servlet-name>GameServer</servlet-name>
+    <url-pattern>/com.servlet/GameServer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServe</servlet-name>
+    <url-pattern>/com.servlet/LoginServe</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PersonGrad</servlet-name>
+    <url-pattern>/com.servlet/PersonGrad</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SigleServer</servlet-name>
+    <url-pattern>/com.servlet/SigleServer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteServer</servlet-name>
+    <url-pattern>/com.servlet/DeleteServer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TwoPeopleServe</servlet-name>
+    <url-pattern>/com.servlet/TwoPeopleServe</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindPeopleServe</servlet-name>
+    <url-pattern>/com.servlet/FindPeopleServe</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MorePeopleServe</servlet-name>
+    <url-pattern>/com.servlet/MorePeopleServe</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangeStateServer</servlet-name>
+    <url-pattern>/com.servlet/ChangeStateServer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetStateServer</servlet-name>
+    <url-pattern>/com.servlet/GetStateServer</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>
