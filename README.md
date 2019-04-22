@@ -9,4 +9,4 @@
 ![avatar](front_page.png)
 你可以直接看我们的演示视频在油管上https://youtu.be/Jb6eHuerpEA 以及在优酷上https://v.youku.com/v_show/id_XNDE0ODk1NTM3Ng==.html?spm=a2h3j.8428770.3416059.1
 
-PS：完整的逻辑层和前端代码在
+PS：完整的逻辑层和前端代码在逻辑层和应用层这个文件夹，逻辑层文件夹是之前的版本。Have fun Try it。
